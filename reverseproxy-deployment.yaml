@@ -17,6 +17,11 @@ spec:
       containers:
       - name: reverseproxy
         image: cnnamani/reverseproxy:v1
+        resources:
+          requests:
+            cpu: "250m"
+          limits:
+            cpu: "500m"
         ports:
         - containerPort: 80
         envFrom:
