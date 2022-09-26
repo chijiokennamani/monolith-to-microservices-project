@@ -17,8 +17,9 @@ spec:
       containers:
       - name: udagram-api-user
         image: cnnamani/udagram-api-user:v1
+        imagePullPolicy: Always
         ports:
-        - containerPort: 80
+        - containerPort: 8080
         envFrom:
         - configMapRef:
             name: envconfig

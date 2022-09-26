@@ -16,9 +16,10 @@ spec:
     spec:
       containers:
       - name: udagram-api-feed
-        image: cnnamani/udagram-api-feed:v1 
+        image: cnnamani/udagram-api-feed:v1
+        imagePullPolicy: Always
         ports:
-        - containerPort: 80
+        - containerPort: 8080
         envFrom:
         - configMapRef:
             name: envconfig
